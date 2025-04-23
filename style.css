@@ -1,0 +1,233 @@
+/* Reset y fuentes básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #222;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Top Bar */
+  .top-bar {
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  .top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar .left i {
+    margin: 0 8px;
+  }
+  .top-bar .right i {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  /* Header */
+  .main-header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .logo span {
+    font-size: 12px;
+    color: #888;
+  }
+  .nav a {
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .quote-button {
+    background-color: #b68c5a;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+  }
+  
+/* Hero */
+.hero {
+    background: url('hero.png') center/cover no-repeat;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero .overlay {
+    padding: 20px 40px; /* Ajusta el padding para un tamaño más compacto */
+    text-align: center;
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 40px; /* Ajusta el tamaño de la fuente del título */
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .hero p {
+    font-size: 14px; /* Ajusta el tamaño de la fuente del subtítulo */
+    margin: 10px 0 0;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.8); /* Un poco más translúcido */
+  }
+  
+  /* Filters */
+  .filters {
+    text-align: center;
+    margin: 40px 0 20px;
+  }
+  .filters button {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 20px;
+  }
+  .filters .active {
+    background-color: #b68c5a;
+    color: white;
+  }
+  
+  /* Portfolio Grid */
+  .portfolio .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px 40px;
+  }
+  .portfolio .grid img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Clients Logos */
+  .clients {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+    text-align: center;
+  }
+  .clients .logos span {
+    font-weight: bold;
+    margin: 0 20px;
+    display: inline-block;
+    font-size: 18px;
+  }
+  
+  /* CTA */
+  .cta {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .cta h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .cta .read-more {
+    background-color: #b68c5a;
+    padding: 12px 24px;
+    color: #fff;
+    border-radius: 4px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #111;
+    color: #ccc;
+    padding-top: 60px;
+  }
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  footer h3, footer h4 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  footer ul {
+    list-style: none;
+  }
+  footer li {
+    margin: 6px 0;
+  }
+  footer input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  .insta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  .insta-grid img {
+    width: 100%;
+    border-radius: 4px;
+  }
+  .footer-bottom {
+    border-top: 1px solid #333;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  .footer-bottom p {
+    margin: 5px 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .portfolio .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .footer-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 500px) {
+    .portfolio .grid {
+      grid-template-columns: 1fr;
+    }
+    .footer-container {
+      grid-template-columns: 1fr;
+    }
+    .main-header .container, .top-bar .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
