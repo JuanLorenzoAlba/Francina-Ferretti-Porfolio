@@ -38,6 +38,13 @@
     font-size: 12px;
     color: #888;
   }
+
+  .logo-icon {
+    width: 100px; /* Ajusta el ancho de la imagen */
+    height: 50px; /* Ajusta la altura de la imagen */
+    margin-left: -115px; /* Espacio entre la imagen y el texto */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+}
   .nav a {
     margin: 0 10px;
     font-size: 16px;
