@@ -19,26 +19,6 @@
     padding: 0 20px;
   }
   
-  /* Top Bar */
-  .top-bar {
-    background-color: #000;
-    color: #fff;
-    font-size: 14px;
-    padding: 10px 0;
-  }
-  .top-bar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .top-bar .left i {
-    margin: 0 8px;
-  }
-  .top-bar .right i {
-    margin-left: 10px;
-    cursor: pointer;
-  }
-  
   /* Header */
   .main-header {
     background-color: #fff;
