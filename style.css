@@ -242,9 +242,12 @@ h4 {
 }
 
 @keyframes scrollDown {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.3;
   }
+
   50% {
     opacity: 1;
   }
@@ -305,52 +308,12 @@ h4 {
   font-weight: 300;
 }
 
-.about-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.stat-item {
-  text-align: center;
-  padding: 20px 10px;
-  background: var(--white);
-  border-radius: 8px;
-  border: 1px solid var(--border-light);
-  transition: all 0.3s ease;
-}
-
-.stat-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  border-color: var(--accent-color);
-}
-
-.stat-number {
-  font-size: 28px;
-  font-weight: 300;
-  color: var(--accent-color);
-  display: block;
-  margin-bottom: 5px;
-}
-
-.stat-label {
-  font-size: 12px;
-  color: var(--text-light);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 .about-image {
   position: relative;
   height: 400px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   transition: all 0.4s ease;
 }
 
@@ -371,7 +334,7 @@ h4 {
 
 .about-image:hover {
   transform: translateY(-10px);
-  box-shadow: 0 30px 80px rgba(0,0,0,0.2);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
 }
 
 .about-image img {
@@ -780,31 +743,26 @@ h4 {
     padding: 0 40px;
   }
 
-.about {
+  .about {
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     padding: 120px 40px;
   }
-  
+
   .about-text {
     text-align: left;
   }
-  
+
   .about-text h2::after {
     left: 0;
     transform: none;
   }
-  
+
   .about-text p {
     margin-left: 0;
     margin-right: 0;
   }
-  
-  .about-stats {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  
+
   .about-image {
     height: 500px;
   }
@@ -907,6 +865,7 @@ h4 {
     padding: 10px 0;
     font-size: 16px;
   }
+
 }
 
 /* Animations */
@@ -1029,13 +988,21 @@ h4 {
   .skills {
     padding: 100px 40px;
   }
-  
+
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
-  
+
   .skill-icon {
     width: 80px;
     height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .cv-btn {
+    padding: 8px 20px;
+    font-size: 12px;
   }
 }
