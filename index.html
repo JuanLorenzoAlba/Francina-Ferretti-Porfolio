@@ -196,27 +196,138 @@
         </div>
         <h3>SketchUp</h3>
       </div>
+      <div class="skill-item">
+        <div class="skill-icon">
+          <img src="revit-logo.jpg" alt="Revit">
+        </div>
+        <h3>Revit</h3>
+      </div>
       <!-- Repetir para cada programa -->
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact fade-in">
-    <h2>Let's Work Together</h2>
-    <p>I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just want to
-      connect, feel free to reach out.</p>
-    <div class="contact-info">
-      <div class="contact-item">
-        <h4>Email</h4>
-        <p><a href="mailto:francina.ferretti@email.com">francina.ferretti@email.com</a></p>
+    <div class="contact-container">
+      <div class="contact-header">
+        <h2>Let's Work Together</h2>
+        <p class="contact-intro">I'm always interested in new opportunities and collaborations. Whether you have a
+          project in mind or just want to connect, feel free to reach out.</p>
       </div>
-      <div class="contact-item">
-        <h4>Phone</h4>
-        <p><a href="tel:+541112345678">+54 11 1234-5678</a></p>
-      </div>
-      <div class="contact-item">
-        <h4>Location</h4>
-        <p>Buenos Aires, Argentina</p>
+
+      <div class="contact-content">
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h3>Send me a message</h3>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required>
+              <label for="name">Your Name</label>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" name="email" required>
+              <label for="email">Email Address</label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" required>
+              <label for="subject">Subject</label>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <label for="message">Your Message</label>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info-wrapper">
+          <h3>Get in touch</h3>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C2,4.89 21.1,4 20,4Z" />
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p><a href="mailto:francina.ferretti@email.com">francina.ferretti@email.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <p><a href="tel:+541112345678">+54 11 1234-5678</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Buenos Aires, Argentina</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z" />
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <p><a href="#" target="_blank">linkedin.com/in/francina-ferretti</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Behance">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M6.5,12C7.3,12 8,11.3 8,10.5V10.5C8,9.7 7.3,9 6.5,9H4V12H6.5M6.5,16C7.6,16 8.5,15.1 8.5,14V14C8.5,12.9 7.6,12 6.5,12H4V16H6.5M2,6V18H6.5C9.5,18 12,15.5 12,12.5C12,11.4 11.4,10.4 10.5,9.7C11.3,9 11.8,8.1 11.8,7C11.8,4.8 10.1,3 7.8,3H2V6M15.5,10.5H20C20,9.1 18.9,8 17.5,8S15,9.1 15,10.5H15.5M22,10.5C22,8 20,6 17.5,6S13,8 13,10.5S15,15 17.5,15C19.2,15 20.7,14.2 21.6,12.9L20.1,12.1C19.6,12.8 18.6,13.3 17.5,13.3C16.1,13.3 15,12.2 15,10.8H22V10.5M17.5,4.5H20V3.5H17.5V4.5Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -408,6 +519,42 @@
         });
       });
     }
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const submitBtn = this.querySelector('.submit-btn');
+      const originalText = submitBtn.innerHTML;
+
+      // Show loading state
+      submitBtn.innerHTML = '<span>Sending...</span>';
+      submitBtn.disabled = true;
+
+      // Simulate form submission (replace with actual form handling)
+      setTimeout(() => {
+        submitBtn.innerHTML = '<span>Message Sent!</span>';
+        submitBtn.style.background = '#4CAF50';
+
+        // Reset form
+        setTimeout(() => {
+          this.reset();
+          submitBtn.innerHTML = originalText;
+          submitBtn.style.background = 'var(--accent-color)';
+          submitBtn.disabled = false;
+        }, 2000);
+      }, 1500);
+    });
+
+    // Add floating label animation
+    document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
+      input.addEventListener('blur', function () {
+        if (this.value !== '') {
+          this.setAttribute('data-filled', 'true');
+        } else {
+          this.removeAttribute('data-filled');
+        }
+      });
+    });
   </script>
 
 </body>
