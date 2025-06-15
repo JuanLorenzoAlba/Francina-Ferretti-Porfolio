@@ -30,6 +30,7 @@
         <a href="#about">About</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
+        <a href="#skills">Skills</a>
       </nav>
     </div>
   </header>
@@ -51,11 +52,37 @@
   <!-- About Section -->
   <section id="about" class="about fade-in">
     <div class="about-text">
-      <h2>About</h2>
-      <p>I am a passionate architecture student dedicated to creating meaningful spaces that enhance human experience.
-        My work focuses on the careful balance between aesthetic beauty and functional design.</p>
-      <p>Through my studies and projects, I explore innovative approaches to sustainable design and the relationship
-        between built environments and their communities.</p>
+      <h2>About Me</h2>
+      <p class="intro">Passionate Architecture Student</p>
+      <p>Soy estudiante de arquitectura enfocada en crear espacios que no solo sean estéticamente atractivos, sino que
+        también mejoren la calidad de vida de las personas. Mi trabajo se centra en encontrar el equilibrio perfecto
+        entre funcionalidad y diseño.</p>
+      <p>A través de mis proyectos académicos, exploro constantemente nuevas formas de integrar la sostenibilidad con la
+        innovación arquitectónica, siempre considerando el impacto que tienen los espacios en las comunidades.</p>
+
+      <div class="about-stats">
+        <div class="stat-item">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Proyectos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Años</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Softwares</span>
+        </div>
+      </div>
+
+      <div class="cv-download">
+        <a href="cv-francina-ferretti.pdf" class="cv-btn" download="CV-Francina-Ferretti.pdf">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+          </svg>
+          Download CV
+        </a>
+      </div>
     </div>
     <div class="about-image">
       <img src="perfil.jpeg" alt="Francina Ferretti">
@@ -83,7 +110,7 @@
           <p>Residential Design</p>
         </div>
       </div>
-      
+
 
       <div class="portfolio-item" data-category="commercial">
         <img src="oficina1.jpeg" alt="Office Complex">
@@ -168,6 +195,25 @@
       </div>
     </div>
   </div>
+
+  <section id="skills" class="skills fade-in">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <div class="skill-icon">
+          <img src="autocad-logo.png" alt="AutoCAD">
+        </div>
+        <h3>AutoCAD</h3>
+      </div>
+      <div class="skill-item">
+        <div class="skill-icon">
+          <img src="sketchup-logo.jpeg" alt="SketchUp">
+        </div>
+        <h3>SketchUp</h3>
+      </div>
+      <!-- Repetir para cada programa -->
+    </div>
+  </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact fade-in">
@@ -276,51 +322,69 @@
     const modalClose = document.querySelector('.modal-close');
 
     const projectData = {
-      'Modern Residence': {
-        description: 'A contemporary residential design focusing on open spaces and natural light integration. This project explores the relationship between indoor and outdoor living through large glass openings and seamless transitions.'
+      'Housing': {
+        subject: 'Proyecto Arquitectónico II',
+        description: 'Diseño de vivienda unifamiliar que explora la relación entre espacios interiores y exteriores. El proyecto se enfoca en la integración con el entorno natural y la optimización de la luz natural.',
+        year: '2024',
+        tools: 'AutoCAD, SketchUp, Photoshop'
       },
       'Office Complex': {
-        description: 'A modern office building designed with sustainability and employee wellbeing in mind. Features include green spaces, natural ventilation systems, and flexible workspace configurations.'
+        subject: 'Diseño Arquitectónico III',
+        description: 'Complejo de oficinas diseñado con criterios de sustentabilidad y bienestar laboral. Incluye espacios verdes, sistemas de ventilación natural y configuraciones flexibles de trabajo.',
+        year: '2024',
+        tools: 'Revit, 3ds Max, V-Ray'
       },
-      'Cultural Center': {
-        description: 'An academic project proposing a cultural center that serves as a community hub. The design emphasizes accessibility and creates dynamic spaces for various cultural activities and events.'
-      },
-      'Conceptual Design': {
-        description: 'An experimental design exploring new geometric forms and spatial relationships. This concept challenges traditional architectural boundaries and investigates the potential of parametric design.'
-      },
-      'Villa Design': {
-        description: 'A luxury residential project that harmonizes with its natural surroundings. The design incorporates sustainable materials and energy-efficient systems while maintaining elegance and comfort.'
-      },
-      'Library Project': {
-        description: 'An academic library design that reimagines the traditional library as a modern learning environment. Features quiet study areas, collaborative spaces, and integrated technology throughout.'
-      }
+      // Agregar el resto de proyectos...
     };
 
+    // Actualizar la función de apertura del modal:
     portfolioItems.forEach(item => {
       item.addEventListener('click', () => {
         const img = item.querySelector('img');
         const title = item.querySelector('h3').textContent;
+        const project = projectData[title];
 
         modalImage.src = img.src;
         modalTitle.textContent = title;
-        modalDescription.textContent = projectData[title]?.description || 'Project description coming soon.';
 
-        modal.style.display = 'block';
+        // Actualizar el HTML del modal-info
+        document.querySelector('.modal-info').innerHTML = `
+      <h3>${title}</h3>
+      <div class="modal-subject">${project?.subject || 'Proyecto Académico'}</div>
+      <div class="modal-description">${project?.description || 'Descripción del proyecto próximamente.'}</div>
+      <div class="modal-details">
+        <div class="modal-detail-item">
+          <div class="modal-detail-label">Año</div>
+          <div class="modal-detail-value">${project?.year || '2024'}</div>
+        </div>
+        <div class="modal-detail-item">
+          <div class="modal-detail-label">Herramientas</div>
+          <div class="modal-detail-value">${project?.tools || 'AutoCAD, SketchUp'}</div>
+        </div>
+      </div>
+    `;
+
+        modal.style.display = 'flex'; // Cambiar a flex
+        setTimeout(() => modal.classList.add('show'), 10);
         document.body.style.overflow = 'hidden';
       });
     });
 
-    modalClose.addEventListener('click', () => {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    });
-
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
+    // Actualizar la función de cierre:
+    function closeModal() {
+      modal.classList.remove('show');
+      setTimeout(() => {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
-      }
+      }, 300);
+    }
+
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
     });
+
+
 
     // Fade in animation on scroll
     const observerOptions = {
