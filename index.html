@@ -308,6 +308,7 @@
               </svg>
             </button>
           </form>
+
         </div>
 
         <!-- Contact Info -->
@@ -336,7 +337,7 @@
               </div>
               <div class="contact-details">
                 <h4>Phone</h4>
-                <p><a href="tel:+542354321697">+54 23 5432-1697</a></p>
+                <p><a href="tel:+542354321697">+54 23-6432-1697</a></p>
               </div>
             </div>
 
@@ -611,6 +612,20 @@
           this.removeAttribute('data-filled');
         }
       });
+    });
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value;
+
+      const body = `Nombre: ${name}%0AEmail: ${email}%0A%0AMensaje:%0A${encodeURIComponent(message)}`;
+      const mailtoLink = `mailto:francinaferretti@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+      window.location.href = mailtoLink;
     });
   </script>
 

@@ -1421,10 +1421,10 @@ h4 {
     top: 12px;
   }
 
-  .form-group input:focus + label,
-  .form-group input:valid + label,
-  .form-group textarea:focus + label,
-  .form-group textarea:valid + label {
+  .form-group input:focus+label,
+  .form-group input:valid+label,
+  .form-group textarea:focus+label,
+  .form-group textarea:valid+label {
     font-size: 11px;
     top: -8px;
   }
